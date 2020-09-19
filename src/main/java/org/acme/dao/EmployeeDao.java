@@ -12,11 +12,11 @@ import java.util.List;
 public class EmployeeDao implements PanacheRepository<Employee> {
 
     public List<Employee> findByName(String lastName) {
-        return find("last_name", lastName).list();
+        return find("lastName", lastName).list();
     }
 
     public List<Employee> findBornAfter(Date date) {
-        return find("birth_date > :date", Parameters.with("date", date)).list();
+        return find("birthDate > :date", Parameters.with("date", date)).list();
     }
 
     public Employee findByEmpNo(int empNo){
