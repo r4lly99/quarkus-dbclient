@@ -13,6 +13,27 @@ You can run your application in dev mode that enables live coding using:
 ./mvnw quarkus:dev
 ```
 
+Sample request from employees DB (examples DB from MySQL) :
+
+```
+curl --location --request GET 'http://localhost:8080/api/employees/10015' \
+--header 'Accept: application/json' \
+--data-raw ''
+```
+
+Response : 
+
+```
+{
+    "birthDate": "1959-08-19",
+    "empNo": 10015,
+    "firstName": "Guoxiang",
+    "gender": "M",
+    "hireDate": "1987-07-02",
+    "lastName": "Nooteboom"
+}
+```
+
 ## Packaging and running the application
 
 The application can be packaged using `./mvnw package`.
